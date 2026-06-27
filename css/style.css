@@ -1,4 +1,26 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+   /* fundos */
+   --bg-page:        #0D0B1A;   /* Noite de Velaris */
+   --bg-card:        #1C1830;   /* Sombra Ilíria */
+   --bg-hover:       #241F3A;   /* Névoa da Corte */
+   --border:         #2E2650;   /* Violeta Profundo */
+
+   /* cores */
+   --accent:         #9B7FD4;   /* Lua de Velaris */
+   --accent-light:   #C9B8FF;   /* Luz das Estrelas */
+   --gold:           #C4A55A;   /* Ouro da Sidra */
+   --blue:           #7B9EB8;   /* Rio Sidra */
+
+   /* texto */
+   --text-primary:   #D4CEFF;   /* Névoa Pálida */
+   --text-secondary: #8B7FA8;   /* Crepúsculo */
+   --text-muted:     #6B6280;   /* Penumbra */
+   /* fonte */
+   --font-sans: 'Inter', system-ui, sans-serif;
+}
 
 * {
     margin: 0;
@@ -7,7 +29,29 @@
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
-    text-align: center;
-    margin: 1em;
+    font-family: var(--font-sans);
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    margin: 20px;
 }
+
+.container-tarefas {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: var(--bg-card);
+    height: 30em;
+ }
+
+ #form-tarefas {
+    margin: 30px;
+ }
+
+ footer {
+    margin-top: 15px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 700;
+ }
+
+
