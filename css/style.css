@@ -22,6 +22,13 @@
    --font-sans: 'Inter', system-ui, sans-serif;
 }
 
+@keyframes fadeInPage{
+	to{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -32,26 +39,51 @@ body {
     font-family: var(--font-sans);
     background-color: var(--bg-page);
     color: var(--text-primary);
-    margin: 20px;
+}
+
+nav {
+   display: flex;
+   justify-content: space-between;
+   padding: 15px;
+   align-items: center;
+   height: 8vh;
+   background-color: var(--bg-hover);
+}
+
+.logo-img {
+   height: 50px;
+   width: auto;
+}
+
+.banner {
+   width: 100%;
+   height: 600px;
+}
+
+.hero-image {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
 }
 
 .container-tarefas {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    background-color: var(--bg-card);
     height: 30em;
  }
 
- #form-tarefas {
-    margin: 30px;
- }
-
  footer {
-    margin-top: 15px;
-    font-size: 12px;
-    text-align: center;
-    font-weight: 700;
+   background-color: var(--bg-card);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 40px;
  }
 
-
+ footer p {
+   font-weight: 700;
+   font-size: 12px;
+   color: var(--text-secondary);
+ }
