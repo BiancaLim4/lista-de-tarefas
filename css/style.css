@@ -74,6 +74,10 @@ nav {
     height: 30em;
  }
 
+ ul #listaTarefas {
+   width: 400px;
+ }
+
  footer {
    background-color: var(--bg-card);
    display: flex;

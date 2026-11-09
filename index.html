@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/icon" href="imagens/velaris-logo-original.png">
+    <link rel="icon" type="image/icon" href="assets/logo/velaris-logo-original.png">
     <title>Lista de Tarefas</title>
 </head>
 <body>
@@ -22,17 +22,21 @@
         <h1>Tarefas de hoje</h1>
         <div class="container-tarefas">
             <form id="form-tarefas">
-                <label for="input-tarefa">Nova tarefa</label>
-                <input type="text" id="input-tarefa" 
-                name="tarefa" placeholder="Digite a sua tarefa...">
-                <button type="submit">Adicionar</button>
+                <label for="tarefa">Nova tarefa</label>
+                <input type="text" id="tarefa" name="tarefa" placeholder="Digite a sua tarefa...">
+                <input type="button" value="Adicionar tarefa" onclick="adicionarTarefa()">
             </form>
             <p id="contador"></p>
-            <ul id="lista-tarefas"></ul>
+            <div>
+                <ul id="listaTarefas">
+                    
+                </ul>
+            </div>
         </div>
     </main>
     <footer>
         <p>© 2026 Bianca Trindade Lima. Todos os direitos reservados.</p>
     </footer>
+    <script src="js/app.js"></script>
 </body>
 </html>
