@@ -3,42 +3,60 @@
 
 :root {
    /* fundos */
-   --bg-page:        #0D0B1A;   /* Noite de Velaris */
-   --bg-card:        #1C1830;   /* Sombra Ilíria */
-   --bg-hover:       #241F3A;   /* Névoa da Corte */
-   --border:         #2E2650;   /* Violeta Profundo */
+   --bg-page: #0D0B1A;
+   /* Noite de Velaris */
+   --bg-card: #1C1830;
+   /* Sombra Ilíria */
+   --bg-hover: #241F3A;
+   /* Névoa da Corte */
+   --border: #2E2650;
+   /* Violeta Profundo */
 
    /* cores */
-   --accent:         #9B7FD4;   /* Lua de Velaris */
-   --accent-light:   #C9B8FF;   /* Luz das Estrelas */
-   --gold:           #C4A55A;   /* Ouro da Sidra */
-   --blue:           #7B9EB8;   /* Rio Sidra */
+   --accent: #9B7FD4;
+   /* Lua de Velaris */
+   --accent-light: #C9B8FF;
+   /* Luz das Estrelas */
+   --gold: #C4A55A;
+   /* Ouro da Sidra */
+   --blue: #7B9EB8;
+   /* Rio Sidra */
 
    /* texto */
-   --text-primary:   #D4CEFF;   /* Névoa Pálida */
-   --text-secondary: #8B7FA8;   /* Crepúsculo */
-   --text-muted:     #6B6280;   /* Penumbra */
+   --text-primary: #D4CEFF;
+   /* Névoa Pálida */
+   --text-secondary: #8B7FA8;
+   /* Crepúsculo */
+   --text-muted: #6B6280;
+   /* Penumbra */
    /* fonte */
    --font-sans: 'Inter', system-ui, sans-serif;
 }
 
-@keyframes fadeInPage{
-	to{
-		opacity: 1;
-		transform: translateY(0);
-	}
+@keyframes fadeInPage {
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
 
 body {
-    font-family: var(--font-sans);
-    background-color: var(--bg-page);
-    color: var(--text-primary);
+   font-family: var(--font-sans);
+   background-color: var(--bg-page);
+   color: var(--text-primary);
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+}
+
+main {
+   flex: 1;
 }
 
 nav {
@@ -57,7 +75,7 @@ nav {
 
 .banner {
    width: 100%;
-   height: 600px;
+   height: 200px;
 }
 
 .hero-image {
@@ -67,27 +85,40 @@ nav {
    object-position: center;
 }
 
+h1 {
+   text-align: start;
+   font-size: 2em;
+   margin-left: 10px;
+}
+
 .container-tarefas {
-    display: flex;
+   /* display: flex;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     height: 30em;
- }
+    background-color: var(--bg-page);*/
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   align-items: start;
+   row-gap: 20px;
+   margin-left: 40px;
 
- ul #listaTarefas {
-   width: 400px;
- }
+}
 
- footer {
+.tarefas-concluidas {
+   grid-column: span 2;
+}
+
+footer {
    background-color: var(--bg-card);
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 40px;
- }
+   min-height: 5vh;
+}
 
- footer p {
+footer p {
    font-weight: 700;
    font-size: 12px;
    color: var(--text-secondary);
- }
+}

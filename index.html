@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="icon" type="image/icon" href="assets/logo/velaris-logo-original.png">
     <title>Lista de Tarefas</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -19,18 +21,24 @@
         <img src="assets/imagens/hero-image.webp" class="hero-image" alt="noite estrelada">
     </section>
     <main>
-        <h1>Tarefas de hoje</h1>
+        <h1>Lista de tarefas</h1>
         <div class="container-tarefas">
-            <form id="form-tarefas">
-                <label for="tarefa">Nova tarefa</label>
-                <input type="text" id="tarefa" name="tarefa" placeholder="Digite a sua tarefa...">
-                <input type="button" value="Adicionar tarefa" onclick="adicionarTarefa()">
-            </form>
-            <p id="contador"></p>
-            <div>
-                <ul id="listaTarefas">
-                    
+            <div class="inserir">
+                <form id="form-tarefas">
+                    <label for="tarefa">Nova tarefa</label>
+                    <input type="text" id="tarefa" name="tarefa" placeholder="Digite a sua tarefa...">
+                    <input type="button" value="Adicionar tarefa" onclick="adicionarTarefa()">
+                </form>
+            </div>
+            <div class="tarefas-pendentes">
+                <h2>Tarefas pendentes</h2>
+                <p id="contador-pendentes"></p>
+                <ul id="listagem">
+
                 </ul>
+            </div>
+            <div class="tarefas-concluidas">
+                <h2>Tarefas concluídas</h2>
             </div>
         </div>
     </main>
@@ -39,4 +47,5 @@
     </footer>
     <script src="js/app.js"></script>
 </body>
+
 </html>
